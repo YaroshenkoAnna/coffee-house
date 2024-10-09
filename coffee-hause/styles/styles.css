@@ -1,0 +1,14 @@
+:root {
+  --color-dark-xl: #403f3d;
+  --color-dark-l: #665f55;
+  --color-dark-m: rgba(64, 63, 61, 0.8);
+  --color-light-m: #e1d4c9;
+  --color-light-xl: #c1b6ad;
+  --color-accent: #b0907a;
+}
+
+.page {
+  background-color: bisque;
+}
+
+/*# sourceMappingURL=styles.css.map */
