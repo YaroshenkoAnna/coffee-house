@@ -142,4 +142,9 @@
     height: 20px;
     margin-right: 8px;
   }
+
+  &__switches {
+    display: flex;
+    gap: 16px;
+  }
 }

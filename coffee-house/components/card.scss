@@ -2,28 +2,38 @@
 @use "../styles/mixins.scss";
 
 .card {
+  overflow: hidden;
+  width: 340px;
   display: flex;
   flex-direction: column;
+  border-radius: 40px;
+  border: 1px solid variables.$color-light-xl;
+  align-items: center;
 
   &_big {
-    align-items: center;
+    border: 0px;
     width: 480px;
 
     & .card__description {
       margin: 16px 0;
       text-align: center;
     }
+
+    & .card__image {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wraper {
+   
+    padding: 20px;
   }
 
   &__title {
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
-  }
-
-  &__image {
-    width: 100%;
-    margin-bottom: 20px;
   }
 
   &__description {
@@ -33,9 +43,13 @@
     margin: 12px 0;
   }
 
-  &__prise {
+  &__price {
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
+  }
+
+  &__image {
+    width: 100%;
   }
 }

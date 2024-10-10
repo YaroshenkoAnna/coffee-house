@@ -20,6 +20,27 @@
     color: variables.$color-dark-xl;
   }
 
+  /* &_small {
+  } */
+
+  &__wraper-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: variables.$color-light-xl;
+
+    &_active {
+      background-color: variables.$color-light-m;
+      color: variables.$color-light-m;
+      pointer-events: none;
+    }
+
+    :hover {
+      background-color: variables.$color-light-m;
+    }
+  }
+
   &_secondary {
     border: 1px solid variables.$color-dark-l;
 
