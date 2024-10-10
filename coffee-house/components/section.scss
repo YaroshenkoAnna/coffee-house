@@ -1,0 +1,57 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.section {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.778vw;
+
+  &_enjoy {
+    background-image: url("../images/img-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+    max-width: 1360px;
+    height: auto;
+    overflow: hidden;
+    padding: 100px;
+    color: variables.$color-light-m;
+  }
+
+  &__wraper {
+    max-width: 50%;
+  }
+
+  &__main-title {
+    color: inherit;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 105%;
+  }
+
+  &__accent {
+    color: variables.$color-accent;
+    font-family: "Inter-italic";
+  }
+
+  &__description {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 40px 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+  }
+
+  &__slider {
+    margin: 40px 0;
+  }
+}

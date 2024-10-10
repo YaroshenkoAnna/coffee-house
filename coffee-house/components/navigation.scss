@@ -1,0 +1,20 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.navigation {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &__item {
+      list-style: none;
+    transition: all 0.3s ease;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

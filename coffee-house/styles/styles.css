@@ -1,0 +1,248 @@
+:root {
+  --color-dark-xl: #403f3d;
+  --color-dark-l: #665f55;
+  --color-dark-m: rgba(64, 63, 61, 0.8);
+  --color-light-m: #e1d4c9;
+  --color-light-xl: #c1b6ad;
+  --color-accent: #b0907a;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter1.ttf");
+}
+@font-face {
+  font-family: "Inter-italic";
+  src: url("../fonts/inter-semi-bold-italic.otf");
+}
+.container {
+  max-width: 1360px;
+  padding: 20px 40px 40px;
+  margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  gap: 8px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  justify-content: center;
+  align-items: center;
+}
+.button_big {
+  width: 200px;
+  height: 64px;
+  background-color: var(--color-light-m);
+  color: var(--color-dark-xl);
+}
+.button_secondary {
+  border: 1px solid var(--color-dark-l);
+}
+.button_round {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--color-dark-l);
+}
+.button_round__wraper {
+  display: flex;
+  flex-direction: column;
+}
+.button_round__text {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+.button_round__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card_big {
+  align-items: center;
+  width: 480px;
+}
+.card_big .card__description {
+  margin: 16px 0;
+  text-align: center;
+}
+.card__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.card__image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.card__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 12px 0;
+}
+.card__prise {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  padding-bottom: 20px;
+}
+.header__logo {
+  width: 100px;
+  height: 60px;
+}
+.header__menu {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.header__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.navigation__item {
+  list-style: none;
+  transition: all 0.3s ease;
+}
+.navigation__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page {
+  background-color: var(--color-light-m);
+  font-family: "Inter";
+  font-feature-settings: "liga" off, "clig" off;
+  font-style: normal;
+  color: var(--color-dark-xl);
+  transition: all 0.3s ease;
+}
+
+.section {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.778vw;
+}
+.section_enjoy {
+  background-image: url("../images/img-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
+  max-width: 1360px;
+  height: auto;
+  overflow: hidden;
+  padding: 100px;
+  color: var(--color-light-m);
+}
+.section__wraper {
+  max-width: 50%;
+}
+.section__main-title {
+  color: inherit;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+}
+.section__accent {
+  color: var(--color-accent);
+  font-family: "Inter-italic";
+}
+.section__description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 40px 0;
+}
+.section__title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.section__slider {
+  margin: 40px 0;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider__wraper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider__image-wraper {
+  display: flex;
+}
+.slider__progress {
+  margin-top: 40px;
+}
+
+.progress {
+  display: flex;
+  gap: 12px;
+}
+.progress__wraper {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background: var(--color-light-xl);
+}
+
+.gallery {
+  display: grid;
+  row-gap: 2.778vw;
+  column-gap: 2.778vw;
+  grid-template-rows: 430px auto 430px;
+  grid-template-columns: 1fr 1fr;
+}
+.gallery__image-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.gallery__image-wraper:first-child {
+  grid-row: 1/3;
+}
+.gallery__image-wraper:last-child {
+  grid-row: 2/4;
+}
+.gallery__image-wraper:nth-child(2), .gallery__image-wraper:nth-child(3) {
+  grid-row: span 1;
+}
+.gallery__image {
+  width: 110%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+/*# sourceMappingURL=styles.css.map */

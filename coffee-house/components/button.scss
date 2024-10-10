@@ -1,0 +1,47 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.button {
+  display: flex;
+  gap: 8px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  justify-content: center;
+  align-items: center;
+
+  &_big {
+    width: 200px;
+    height: 64px;
+    background-color: variables.$color-light-m;
+    color: variables.$color-dark-xl;
+  }
+
+  &_secondary {
+    border: 1px solid variables.$color-dark-l;
+  }
+
+  &_round {
+    width: 60px;
+    height: 60px;
+    border: 1px solid variables.$color-dark-l;
+
+    &__wraper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+}

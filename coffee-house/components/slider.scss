@@ -1,0 +1,23 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wraper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__image-wraper {
+    display: flex;
+  }
+
+  &__progress {
+    margin-top: 40px;
+  }
+}

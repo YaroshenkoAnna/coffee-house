@@ -1,0 +1,11 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.page {
+  background-color: variables.$color-light-m;
+  font-family: "Inter";
+  font-feature-settings: "liga" off, "clig" off;
+  font-style: normal;
+  color: variables.$color-dark-xl;
+  transition: all 0.3s ease;
+}

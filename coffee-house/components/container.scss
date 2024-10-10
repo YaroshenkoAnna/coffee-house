@@ -1,0 +1,8 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.container {
+  max-width: 1360px;
+  padding: 20px 40px 40px;
+  margin: 0 auto;
+}

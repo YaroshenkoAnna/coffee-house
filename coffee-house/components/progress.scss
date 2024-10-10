@@ -1,0 +1,16 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.progress {
+  display: flex;
+  gap: 12px;
+
+  &__wraper {
+    width: 40px;
+    height: 4px;
+    border-radius: 100px;
+    background: variables.$color-light-xl;
+  }
+
+
+}
