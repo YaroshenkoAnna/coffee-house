@@ -2,6 +2,7 @@
 @use "../styles/mixins.scss";
 
 .slider {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

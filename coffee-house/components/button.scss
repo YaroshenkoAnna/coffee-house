@@ -2,7 +2,7 @@
 @use "../styles/mixins.scss";
 
 .button {
-  display: flex;
+  display: inline-flex;
   gap: 8px;
   border-radius: 100px;
   font-size: 16px;
@@ -26,22 +26,35 @@
     width: 60px;
     height: 60px;
     border: 1px solid variables.$color-dark-l;
+  }
 
-    &__wraper {
-      display: flex;
-      flex-direction: column;
-    }
+  &_light {
+    border: 1px solid variables.$color-light-m;
+  }
 
-    &__text {
-      font-size: 10px;
-      font-weight: 600;
-      line-height: 140%;
-    }
+  &__wraper {
+    width: 116px;
+    display: flex;
+    flex-direction: column;
+  }
 
-    &__title {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 150%;
-    }
+  &__text {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  &__icon {
+    fill: variables.$color-dark-xl;
+  }
+
+  &__footer-icon {
+    stroke: variables.$color-light-m;
   }
 }
