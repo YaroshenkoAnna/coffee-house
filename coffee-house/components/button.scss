@@ -10,6 +10,8 @@
   line-height: 150%;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
   &_big {
     width: 200px;
@@ -20,6 +22,19 @@
 
   &_secondary {
     border: 1px solid variables.$color-dark-l;
+
+    &:hover {
+      background-color: variables.$color-dark-l;
+      color: variables.$color-light-m;
+
+      & .button__arrow {
+        stroke: variables.$color-light-m;
+      }
+
+      & .button__icon {
+        fill: variables.$color-light-m;
+      }
+    }
   }
 
   &_round {
@@ -30,6 +45,14 @@
 
   &_light {
     border: 1px solid variables.$color-light-m;
+
+    &:hover {
+      background-color: variables.$color-light-m;
+
+      & .button__footer-icon {
+        stroke: variables.$color-dark-xl;
+      }
+    }
   }
 
   &__wraper {
@@ -52,9 +75,23 @@
 
   &__icon {
     fill: variables.$color-dark-xl;
+    transition: all 0.3s ease;
   }
 
   &__footer-icon {
     stroke: variables.$color-light-m;
+    transition: all 0.3s ease;
+  }
+  &_primary:hover .button__hide-icon {
+    width: 20px;
+  }
+  &__hide-icon {
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+  &__arrow {
+    stroke: variables.$color-dark-xl;
+    transition: all 0.3s ease;
   }
 }

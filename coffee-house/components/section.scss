@@ -114,8 +114,27 @@
   }
 
   &__link {
+    position: relative;
     text-decoration: none;
     color: inherit;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -5px;
+      display: block;
+      height: 2px;
+      background: variables.$color-light-m;
+      width: 0;
+      transition: all 0.3s ease;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   &__icon {

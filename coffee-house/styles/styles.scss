@@ -13,3 +13,7 @@
 @use "../components/slider.scss";
 @use "../components/progress.scss";
 @use "../components/gallery.scss";
+
+html{
+     scroll-behavior: smooth;
+}
