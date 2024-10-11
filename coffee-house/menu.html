@@ -16,30 +16,32 @@
   <body class="page">
     <div class="container">
       <header class="header">
-        <a href="#" class="header__link"
+        <a href="index.html" class="header__link"
           ><img src="images/logo.png" alt="logo" class="header__logo"
         /></a>
 
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#favorite" class="navigation__link">Favorite coffee</a>
+              <a href="index.html#favorite" class="navigation__link"
+                >Favorite coffee</a
+              >
             </li>
             <li class="navigation__item">
-              <a href="#about" class="navigation__link">About</a>
+              <a href="index.html#about" class="navigation__link">About</a>
             </li>
             <li class="navigation__item">
-              <a href="#mobile-app" class="navigation__link">Mobile app</a>
+              <a href="index.html#mobile-app" class="navigation__link"
+                >Mobile app</a
+              >
             </li>
             <li class="navigation__item">
               <a href="#contact" class="navigation__link">Contact us</a>
             </li>
           </ul>
         </nav>
-        <div class="header__menu">
-          <span class="header__menu-title"
-            ><a href="menu.html" class="header__link">Menu</a>
-          </span>
+        <div class="header__menu header__menu_active">
+          <span class="header__menu-title">Menu </span>
           <img
             src="images/coffee-cup.svg"
             alt="coffee-cup"
@@ -47,14 +49,14 @@
           />
         </div>
       </header>
-      <section class="section">
+      <section class="section section_menu">
         <h1 class="section__title">
           Behind each of our cups hides an
           <em class="section__accent">amazing surprise</em>
         </h1>
         <div class="section__switches">
-          <div class="button button_secondary button_small">
-            <div class="button__wraper-icon button__wraper-icon_active">☕</div>
+          <div class="button button_secondary button_small button_active">
+            <div class="button__wraper-icon">☕</div>
             <span class="button__switch">Coffee</span>
           </div>
           <div class="button button_secondary button_small">
@@ -190,5 +192,6 @@
         </div>
       </footer>
     </div>
+    <script src="src/script.js" type="module"></script>
   </body>
 </html>

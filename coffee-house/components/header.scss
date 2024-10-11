@@ -37,6 +37,10 @@
       transform: translateX(-50%);
     }
 
+    &_active::after {
+      width: 100%;
+    }
+
     &:hover::after {
       width: 100%;
     }

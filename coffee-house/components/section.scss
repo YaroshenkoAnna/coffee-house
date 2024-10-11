@@ -32,6 +32,15 @@
     margin-bottom: 0;
   }
 
+  &_menu {
+    align-items: center;
+    flex-direction: column;
+
+    & .section__title {
+      max-width: 800px;
+    }
+  }
+
   &__wraper {
     width: 43.75vw;
     display: flex;
@@ -146,5 +155,13 @@
   &__switches {
     display: flex;
     gap: 16px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 }

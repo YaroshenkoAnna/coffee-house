@@ -32,36 +32,44 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* &_small {
-  } */
 }
 .button_big {
   width: 200px;
   height: 64px;
   background-color: var(--color-light-m);
   color: var(--color-dark-xl);
+  transition: all 0.3s ease;
+}
+.button_active {
+  background-color: var(--color-dark-l);
+  color: var(--color-light-m);
+  pointer-events: none;
+}
+.button_active .button__wraper-icon {
+  background-color: var(--color-light-m);
+}
+.button_small {
+  padding: 8px 16px 8px 8px;
 }
 .button__wraper-icon {
+  padding: 3px 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   background-color: var(--color-light-xl);
-}
-.button__wraper-icon_active {
-  background-color: var(--color-light-m);
-  color: var(--color-light-m);
-  pointer-events: none;
-}
-.button__wraper-icon :hover {
-  background-color: var(--color-light-m);
+  transition: all 0.3s ease;
 }
 .button_secondary {
   border: 1px solid var(--color-dark-l);
+  transition: all 0.3s ease;
 }
 .button_secondary:hover {
   background-color: var(--color-dark-l);
   color: var(--color-light-m);
+}
+.button_secondary:hover .button__wraper-icon {
+  background-color: var(--color-light-m);
 }
 .button_secondary:hover .button__arrow {
   stroke: var(--color-light-m);
@@ -76,6 +84,7 @@
 }
 .button_light {
   border: 1px solid var(--color-light-m);
+  transition: all 0.3s ease-in;
 }
 .button_light:hover {
   background-color: var(--color-light-m);
@@ -120,9 +129,10 @@
 
 .card {
   overflow: hidden;
-  width: 340px;
+  width: 310px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   border-radius: 40px;
   border: 1px solid var(--color-light-xl);
   align-items: center;
@@ -195,6 +205,9 @@
   transition: all 0.3s ease;
   left: 50%;
   transform: translateX(-50%);
+}
+.header__menu_active::after {
+  width: 100%;
 }
 .header__menu:hover::after {
   width: 100%;
@@ -274,6 +287,13 @@
   padding: 100px;
   padding: clamp(60px, 7.4%, 100px);
   margin-bottom: 0;
+}
+.section_menu {
+  align-items: center;
+  flex-direction: column;
+}
+.section_menu .section__title {
+  max-width: 800px;
 }
 .section__wraper {
   width: 43.75vw;
@@ -372,6 +392,13 @@
 .section__switches {
   display: flex;
   gap: 16px;
+}
+.section__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .slider {

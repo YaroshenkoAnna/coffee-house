@@ -3,9 +3,10 @@
 
 .card {
   overflow: hidden;
-  width: 340px;
+  width: 310px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   border-radius: 40px;
   border: 1px solid variables.$color-light-xl;
   align-items: center;
@@ -26,7 +27,6 @@
   }
 
   &__wraper {
-   
     padding: 20px;
   }
 
@@ -47,6 +47,10 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
+  }
+
+  &__image-wraper{
+    
   }
 
   &__image {

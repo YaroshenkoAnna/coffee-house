@@ -18,35 +18,44 @@
     height: 64px;
     background-color: variables.$color-light-m;
     color: variables.$color-dark-xl;
+    transition: all 0.3s ease;
   }
 
-  /* &_small {
-  } */
+  &_active {
+    background-color: variables.$color-dark-l;
+    color: variables.$color-light-m;
+    pointer-events: none;
+
+    & .button__wraper-icon {
+      background-color: variables.$color-light-m;
+    }
+  }
+
+  &_small {
+    padding: 8px 16px 8px 8px;
+  }
 
   &__wraper-icon {
+    padding: 3px 7px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
     background-color: variables.$color-light-xl;
-
-    &_active {
-      background-color: variables.$color-light-m;
-      color: variables.$color-light-m;
-      pointer-events: none;
-    }
-
-    :hover {
-      background-color: variables.$color-light-m;
-    }
+    transition: all 0.3s ease;
   }
 
   &_secondary {
     border: 1px solid variables.$color-dark-l;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: variables.$color-dark-l;
       color: variables.$color-light-m;
+
+      & .button__wraper-icon {
+        background-color: variables.$color-light-m;
+      }
 
       & .button__arrow {
         stroke: variables.$color-light-m;
@@ -66,6 +75,7 @@
 
   &_light {
     border: 1px solid variables.$color-light-m;
+    transition: all 0.3s ease-in;
 
     &:hover {
       background-color: variables.$color-light-m;
