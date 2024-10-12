@@ -1,25 +1,43 @@
 import { createElement } from "./createElement.js";
 import  {coffee, tea, dessert} from "./products.js";
 
-export function createMenu(category = "coffee"){
-    const menu = document.querySelector(".section__menu");
-    menu.textContent = "";
+[coffee, tea, dessert].forEach(createMenu)
 
-    let listProducts = category == "coffee" ? coffee : category == "tea" ? tea : dessert;
+export function createMenu(listProducts){
+    const menu = document.querySelector(".section__menu");
+
+    let category = listProducts == coffee ? "coffee" : listProducts == tea ? "tea" : "dessert";
+
+     const menuWraper = createElement({
+            tag: "div",
+            classes: ["section__menu-wraper"],
+            parent: menu
+        });
+
+        menuWraper.id = category + "Menu";
+        if(listProducts == coffee){
+            menuWraper.classList.add("section__menu-wraper_active");
+        }
 
     listProducts.forEach((product, index) => {
         const card = createElement({
             tag: "div",
             classes: ["card"],
-            parent: menu
+            parent: menuWraper
         });
 
         card.setAttribute("data-number", `${category}_${index}`);
 
+        const cardImageWraper =createElement({
+            tag: "div",
+            classes: ["card__image-wraper"],
+            parent: card
+        });
+
         const cardImage = createElement({
             tag: "img",
             classes: ["card__image"],
-            parent: card
+            parent: cardImageWraper
         });
         let extension = category == "coffee" ? "jpg" : "png"
         cardImage.src = `images/${category}-${index}.${extension}`;

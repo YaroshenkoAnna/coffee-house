@@ -17,6 +17,10 @@
     align-items: center;
     overflow: hidden;
 
+    &:hover .gallery__image {
+      transform: scale(1);
+    }
+
     &:first-child {
       grid-row: 1/3;
     }

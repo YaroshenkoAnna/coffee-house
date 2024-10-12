@@ -1,0 +1,8 @@
+$xs: 320px;
+$md: 768px;
+
+@mixin device($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

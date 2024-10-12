@@ -71,6 +71,7 @@
     width: 60px;
     height: 60px;
     border: 1px solid variables.$color-dark-l;
+    box-sizing: border-box;
   }
 
   &_light {

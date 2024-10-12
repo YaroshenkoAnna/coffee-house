@@ -18,7 +18,7 @@
     height: auto;
     overflow: hidden;
     padding: 100px;
-    padding: clamp(60px, 7.4%, 100px);
+    padding: 100px clamp(60px, 7.4%, 100px);
     color: variables.$color-light-m;
     justify-content: flex-start;
   }
@@ -157,11 +157,15 @@
     gap: 16px;
   }
 
-  &__menu {
-    display: flex;
+  &__menu-wraper {
+    display: none;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+
+    &_active {
+      display: flex;
+    }
   }
 }

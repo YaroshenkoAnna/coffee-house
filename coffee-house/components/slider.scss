@@ -12,6 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 4px;
+    box-sizing: border-box;
   }
 
   &__image-wraper {

@@ -1,5 +1,5 @@
+import {switchMenu} from "../modules/switch.js"
 
-import  {createMenu} from "../modules/createMenu.js";
+const switches = document.querySelector(".section__switches");
+    switches.addEventListener("click", switchMenu);
 
-
-createMenu();

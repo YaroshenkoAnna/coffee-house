@@ -3,10 +3,14 @@
 
 .navigation {
   margin-top: -8px;
+  display: flex;
+  align-items: baseline;
+
   &__list {
     display: flex;
     flex-direction: row;
     gap: 40px;
+    margin-right: calc((100vw - 708px) / 2);
   }
 
   &__item {
@@ -36,5 +40,12 @@
   &__link {
     text-decoration: none;
     color: inherit;
+  }
+}
+
+@include mixins.device(mixins.$md) {
+  .navigation {
+    position: fixed;
+    right: -1000px;
   }
 }

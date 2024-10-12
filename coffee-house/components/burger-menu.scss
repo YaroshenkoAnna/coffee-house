@@ -1,0 +1,11 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+.burger-menu {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid variables.$color-dark-l;
+}

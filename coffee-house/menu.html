@@ -20,6 +20,7 @@
           ><img src="images/logo.png" alt="logo" class="header__logo"
         /></a>
 
+        <div class="header__burger-menu burger-menu"></div>
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -39,15 +40,16 @@
               <a href="#contact" class="navigation__link">Contact us</a>
             </li>
           </ul>
+
+          <div class="header__menu header__menu_active">
+            <span class="header__menu-title">Menu </span>
+            <img
+              src="images/coffee-cup.svg"
+              alt="coffee-cup"
+              class="header__icon"
+            />
+          </div>
         </nav>
-        <div class="header__menu header__menu_active">
-          <span class="header__menu-title">Menu </span>
-          <img
-            src="images/coffee-cup.svg"
-            alt="coffee-cup"
-            class="header__icon"
-          />
-        </div>
       </header>
       <section class="section section_menu">
         <h1 class="section__title">
@@ -55,33 +57,24 @@
           <em class="section__accent">amazing surprise</em>
         </h1>
         <div class="section__switches">
-          <div class="button button_secondary button_small button_active">
+          <div
+            class="button button_secondary button_small button_active"
+            id="coffee"
+          >
             <div class="button__wraper-icon">☕</div>
             <span class="button__switch">Coffee</span>
           </div>
-          <div class="button button_secondary button_small">
+          <div class="button button_secondary button_small" id="tea">
             <div class="button__wraper-icon">🫖</div>
             <span class="button__switch">Tea</span>
           </div>
-          <div class="button button_secondary button_small">
+          <div class="button button_secondary button_small" id="dessert">
             <div class="button__wraper-icon">🍰</div>
             <span class="button__switch">Dessert</span>
           </div>
         </div>
 
-        <div class="section__menu">
-          <div class="card">
-            <img src="images/coffee-1.jpg" alt="coffee" class="card__image" />
-            <div class="card__wraper">
-              <h3 class="card__title">Irish coffee</h3>
-              <p class="card__description">
-                Fragrant black coffee with Jameson Irish whiskey and whipped
-                milk
-              </p>
-              <span class="card__price">$7.00</span>
-            </div>
-          </div>
-        </div>
+        <div class="section__menu"></div>
       </section>
       <footer class="section section_footer" id="contact">
         <div class="section__wraper section__wraper_footer">
@@ -192,6 +185,7 @@
         </div>
       </footer>
     </div>
+    <script src="modules/createMenu.js" type="module"></script>
     <script src="src/script.js" type="module"></script>
   </body>
 </html>
