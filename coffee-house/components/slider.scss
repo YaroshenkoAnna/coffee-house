@@ -16,11 +16,42 @@
     box-sizing: border-box;
   }
 
-  &__image-wraper {
+  &__button {
+    flex-shrink: 0;
+  }
+
+  &__card {
     display: flex;
   }
 
   &__progress {
     margin-top: 40px;
+  }
+}
+
+@include mixins.device(mixins.$md) {
+  .slider {
+    &__wraper {
+      padding: 0;
+    }
+  }
+}
+
+@include mixins.device(mixins.$sm) {
+  .slider {
+    &__wraper {
+      justify-content: center;
+    }
+    &__card {
+      width: 100%;
+    }
+  }
+}
+
+@include mixins.device(mixins.$sm1) {
+  .slider {
+    &__button {
+      display: none;
+    }
   }
 }
