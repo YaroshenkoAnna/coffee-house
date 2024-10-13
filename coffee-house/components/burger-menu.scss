@@ -1,11 +1,38 @@
 @use "../styles/variables.scss";
 @use "../styles/mixins.scss";
 .burger-menu {
+  cursor: pointer;
   display: flex;
   width: 44px;
   height: 44px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   border: 1px solid variables.$color-dark-l;
+  position: relative;
+
+  &_active .burger-menu__item:first-child{
+      transform: rotate(45deg);
+  }
+
+  &_active .burger-menu__item:last-child{
+      transform: rotate(-45deg);
+  }
+
+  &__item {
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    background-color: variables.$color-dark-xl;
+    transition: transform 0.3s ease-in;
+
+    &:first-child {
+        transform: translateY(4px);
+      }
+    
+      &:last-child {
+        transform: translateY(-4px);
+      }
+  }
 }
