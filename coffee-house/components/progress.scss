@@ -12,5 +12,11 @@
     background: variables.$color-light-xl;
   }
 
-
+  &__inner {
+    height: 4px;
+    border-radius: 100px;
+    width: 0;
+    background-color: variables.$color-dark-l;
+    transition: width 0.3s ease;
+  }
 }

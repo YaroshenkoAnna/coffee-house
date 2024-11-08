@@ -16,16 +16,32 @@
     box-sizing: border-box;
   }
 
+  &__content {
+    width: 480px;
+    overflow: hidden;
+
+  }
+
   &__button {
     flex-shrink: 0;
   }
 
   &__card {
+    width: 100%;
     display: flex;
   }
 
   &__progress {
     margin-top: 40px;
+  }
+
+  &__cards-wraper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 300%;
+    transition: left 0.5s ease-in;
   }
 }
 
@@ -55,3 +71,4 @@
     }
   }
 }
+

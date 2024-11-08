@@ -149,6 +149,13 @@
   border: 1px solid var(--color-light-xl);
   align-items: center;
   cursor: pointer;
+  /* 
+  &__image-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  } */
 }
 .card:hover .card__image {
   transform: scale(1);
@@ -156,7 +163,7 @@
 .card_big {
   border: 0px;
   width: 480px;
-  cursor: none;
+  cursor: default;
 }
 .card_big .card__description {
   margin: 16px 0;
@@ -187,12 +194,6 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
-}
-.card__image-wraper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 .card__image {
   width: 100%;
@@ -324,6 +325,11 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 379px) {
+  .page {
+    width: 380px;
+  }
+}
 .section {
   margin-bottom: 100px;
   display: flex;
@@ -539,14 +545,27 @@
   padding: 0 4px;
   box-sizing: border-box;
 }
+.slider__content {
+  width: 480px;
+  overflow: hidden;
+}
 .slider__button {
   flex-shrink: 0;
 }
 .slider__card {
+  width: 100%;
   display: flex;
 }
 .slider__progress {
   margin-top: 40px;
+}
+.slider__cards-wraper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 300%;
+  transition: left 0.5s ease-in;
 }
 
 @media only screen and (max-width: 768px) {
@@ -576,6 +595,13 @@
   height: 4px;
   border-radius: 100px;
   background: var(--color-light-xl);
+}
+.progress__inner {
+  height: 4px;
+  border-radius: 100px;
+  width: 0;
+  background-color: var(--color-dark-l);
+  transition: width 0.3s ease;
 }
 
 .gallery {

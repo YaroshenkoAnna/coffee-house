@@ -12,3 +12,9 @@
     overflow: hidden;
   }
 }
+
+@include mixins.device(mixins.$xxs) {
+  .page {
+    width: 380px;
+  }
+}

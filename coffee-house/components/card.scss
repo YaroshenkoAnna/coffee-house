@@ -19,7 +19,7 @@
   &_big {
     border: 0px;
     width: 480px;
-    cursor: none;
+    cursor: default;
 
     & .card__description {
       margin: 16px 0;
@@ -57,13 +57,13 @@
     font-weight: 600;
     line-height: 125%;
   }
-
+  /* 
   &__image-wraper {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  }
+  } */
 
   &__image {
     width: 100%;
