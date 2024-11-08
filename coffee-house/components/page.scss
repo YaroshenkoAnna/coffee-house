@@ -1,0 +1,20 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.page {
+  background-color: variables.$color-light-m;
+  font-family: "Inter";
+  font-feature-settings: "liga" off, "clig" off;
+  font-style: normal;
+  color: variables.$color-dark-xl;
+
+  &_enabled-scroll {
+    overflow: hidden;
+  }
+}
+
+@include mixins.device(mixins.$xxs) {
+  .page {
+    width: 380px;
+  }
+}

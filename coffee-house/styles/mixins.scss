@@ -1,0 +1,12 @@
+$xxs: 379px;
+$xs: 380px;
+$sm1: 480px;
+$sm: 680px;
+$md: 768px;
+$lg: 932px;
+
+@mixin device($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

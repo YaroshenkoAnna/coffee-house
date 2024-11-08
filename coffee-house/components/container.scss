@@ -1,0 +1,20 @@
+@use "../styles/variables.scss";
+@use "../styles/mixins.scss";
+
+.container {
+  max-width: 1360px;
+  padding: 20px 40px 40px;
+  margin: 0 auto;
+}
+
+@include mixins.device(mixins.$md) {
+  .container {
+    padding: 20px 5.208% 40px;
+  }
+}
+
+@include mixins.device(mixins.$xs) {
+  .container {
+    padding: 20px 16px 40px;
+  }
+}
